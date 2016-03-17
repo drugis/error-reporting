@@ -34,7 +34,7 @@ angular.module('errorReporting', [])
     restrict: 'E',
     template: '' +
     '<div ng-if="error" class="row" ng-cloak>' +
-      '<div class="columns large-10 medium-10 small-12 medium-centered large-centered ">' +
+      '<div class="columns large-10 medium-10 small-12 medium-centered large-centered"  style="margin: 1rem;">' +
       '<div class="alert-box alert">' +
         '<div class="alert-box-message" style="font-size: 1.25rem">' +
       	  '<a ng-click="closeError()" class="close" style="top: 1.25rem; font-size: 2rem">&times;</a>' +
