@@ -1,4 +1,4 @@
-angular.module('error-reporting-directive', [])
+angular.module('errorReporting', [])
 
 .factory('ErrorReportingService', ['$rootScope', '$q', function($rootScope, $q) {
 
