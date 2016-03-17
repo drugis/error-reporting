@@ -10,7 +10,6 @@
     "angular1"
   ],
   "license": "GNU",
-  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
