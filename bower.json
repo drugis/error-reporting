@@ -1,0 +1,21 @@
+{
+  "name": "error-reporting",
+  "authors": [
+    "Connor Stroomberg <c.stroomberg@gmail.com>"
+  ],
+  "description": "angular 1 module to report on errors during communication with backend systems",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "angular1"
+  ],
+  "license": "GNU",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
