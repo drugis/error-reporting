@@ -43,7 +43,7 @@ angular.module('errorReporting', [])
           '</div>' +
           '<div ng-if="error.type === \'patavi\'">' +
       		  '<p>An error has occured while running the model in R.</p>' +
-      		  '{{error.message}}' +
+      		  '<div>{{error.cause}}</div> <div>{{error.message}}</div>' +
       	  '</div>' +
         '</div>' +
        '</div>' +
