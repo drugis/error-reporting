@@ -68,6 +68,13 @@ angular.module('errorReporting', [])
             // todo need to scroll to top
           });
 
+          $rootScope.$on("$stateChangeSuccess",
+            function(event, toState) {
+              $rootScope.currentStateName = toState.name;
+              delete $rootScope.error;
+            }
+          );
+
           $rootScope.closeError = function() {
             delete $rootScope.error;
           };
