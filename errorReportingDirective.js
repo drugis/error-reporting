@@ -52,14 +52,14 @@ angular.module('errorReporting', [])
           '<div class="alert-box-message" style="font-size: 1.25rem">' +
           '<a ng-click="closeError()" class="close" style="top: 1.25rem; font-size: 2rem">&times;</a>' +
           '<div ng-if="error.type !== \'PATAVI\'">' +
-          '  <div ng-if="error.code>{{::error.code}}</div> ' +
-          '  <div ng-if="error.cause>{{::error.cause}}</div> ' +
+          '  <div ng-if="error.code">{{::error.code}}</div> ' +
+          '  <div ng-if="error.cause">{{::error.cause}}</div> ' +
           '  <div>{{::error.message}}</div>' +
           '</div>' +
           '<div ng-if="error.type === \'PATAVI\'">' +
           '  <p>An error has occured while running the model in R.</p>' +
-          '  <div ng-if="error.cause>{{::error.cause}}</div>' +
-          '  <div ng-if="error.message>{{::error.message}}</div>' +
+          '  <div ng-if="error.cause">{{::error.cause}}</div>' +
+          '  <div ng-if="error.message">{{::error.message}}</div>' +
           '</div>' +
           '</div>' +
           '</div>' +
