@@ -20,10 +20,10 @@ angular.module('errorReporting', [])
         type: 'BACK_END_ERROR',
         cause: 'An unknown error occurred' // default message
       };
-      if (rejection && rejection.status, rejection.data) {
+      if (rejection && rejection.status && (rejection.statusText || rejection.data)) {
         errorHolder = {
           code: rejection.status,
-          cause: rejection.data
+          cause: rejection.statusText || rejection.data
         };
       }
 
