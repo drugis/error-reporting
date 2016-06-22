@@ -7,15 +7,6 @@ angular.module('errorReporting', [])
 
     function handleReaction(rejection) {
 
-      // Dirty work-around to swallow error on patavi warm-up request, needs to be replaced in new error handeling
-      // As an example look at :
-      // http://stackoverflow.com/questions/33605486/handle-angular-http-errors-locally-with-fallback-to-global-error-handling
-      // http://www.codelord.net/2014/06/25/generic-error-handling-in-angularjs/
-      if (rejection && rejection.config && rejection.config.url.indexOf('warm-up', rejection.config.url.length - rejection.config.url.length) !== -1) {
-        return $q.resolve();
-      }
-
-
       var errorHolder = {
         type: 'BACK_END_ERROR',
         cause: 'An unknown error occurred' // default message
