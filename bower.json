@@ -1,7 +1,8 @@
 {
   "name": "error-reporting",
   "authors": [
-    "Connor Stroomberg <c.stroomberg@gmail.com>"
+    "Connor Stroomberg <c.stroomberg@gmail.com>",
+    "Joris de Keijser <j.j.de.keijser@umcg.nl>"
   ],
   "description": "angular 1 module to report on errors during communication with backend systems",
   "main": "",
