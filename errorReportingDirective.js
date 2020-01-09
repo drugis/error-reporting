@@ -4,9 +4,7 @@ angular.module('errorReporting', [])
 
   .factory('ErrorReportingService', ['$rootScope', '$q',
     function($rootScope, $q) {
-
       function handleReaction(rejection) {
-
         var errorHolder = {
           type: 'BACK_END_ERROR',
           cause: 'An unknown error occurred' // default message
@@ -14,7 +12,7 @@ angular.module('errorReporting', [])
         if (rejection && rejection.status && (rejection.statusText || rejection.data)) {
           errorHolder = {
             code: rejection.status,
-            cause: rejection.statusText || rejection.data
+            cause: rejection.data || rejection.statusText
           };
         }
 
@@ -32,8 +30,16 @@ angular.module('errorReporting', [])
       };
     }
   ])
-  .directive('errorReporting', ['$rootScope', '$transitions', '$window',
-    function($rootScope, $transitions, $window) {
+
+  .directive('errorReporting', [
+    '$rootScope',
+    '$transitions',
+    '$window',
+    function(
+      $rootScope,
+      $transitions,
+      $window
+    ) {
       return {
         restrict: 'E',
         template: '' +
@@ -53,7 +59,7 @@ angular.module('errorReporting', [])
           '   </alert>' +
           ' </div>' +
           '</div>',
-        link: function(scope, element) {
+        link: function() {
           $rootScope.$on('error', function(e, error) {
             $rootScope.error = error;
             $window.scrollTo(0, 0);
